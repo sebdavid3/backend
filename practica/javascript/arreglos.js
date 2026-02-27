@@ -40,3 +40,50 @@ console.log(los_goti.includes('victoria'));
 console.log(los_goti.find(s => s.startsWith('s')));
 
 
+
+
+
+//
+
+const guerreros = [
+    { nombre: "Goku", nivel: 9001, tipo: "Sayayin" },
+    { nombre: "Vegeta", nivel: 8500, tipo: "Sayayin" },
+    { nombre: "Krillin", nivel: 500, tipo: "Humano" },
+    { nombre: "Piccolo", nivel: 3000, tipo: "Namekusei" }
+];
+
+nombre_guerreros = guerreros.map(n => n.nombre);
+console.log(nombre_guerreros);
+
+piccolo = guerreros.filter(n => n.nombre == "Piccolo");
+console.log(piccolo);
+
+guerrero_primerHum = guerreros.find(n=> n.tipo === "Humano" );
+console.log(guerrero_primerHum);
+
+guerreros_fuertes = guerreros.every(g => g.nivel >= 3000);
+if(guerreros_fuertes){
+    console.log("Todos tienen mas de 3000");
+}else{
+    console.log("No todos los guerreros son fuertes");
+}
+
+
+guerreros_namek = guerreros.some(g => g.tipo === "Namekusei");
+if(guerreros_namek){
+    console.log("Hay al menos un Namek");
+}else{
+    console.log("No hay Namek");
+}
+
+debilFuerte = guerreros.sort((a,b) => a.nivel - b.nivel)
+ console.log(debilFuerte);
+ 
+fuerteDebil = guerreros.sort((a,b) => b.nivel - a.nivel )
+ console.log(debilFuerte);
+
+puntosEquipo = guerreros.reduce((total, valor) => total + valor.nivel, 0);
+console.log(puntosEquipo);
+
+
+
