@@ -20,6 +20,9 @@ npm i -D typescript @types/express @types/node ts-node-dev
 
 # 4. Crear el archivo de configuración de TypeScript (tsconfig.json)
 npx tsc --init
+
+
+npm pkg set scripts.dev="nodemon src/index.ts" scripts.build="tsc" scripts.start="node dist/index.js" 
 ```
 
 ### El tsconfig.json Clave
