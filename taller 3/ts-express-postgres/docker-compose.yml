@@ -20,11 +20,8 @@ services:
     ports:
       - "3000:3000"
     environment:
-      DB_HOST: db
-      DB_PORT: 5432
-      DB_NAME: appdb
-      DB_USER: appuser
-      DB_PASSWORD: supersecret_dev
+      DATABASE_URL: postgres://appuser:supersecret_dev@db:5432/appdb
+      PORT: 3000
     depends_on:
       - db
 
