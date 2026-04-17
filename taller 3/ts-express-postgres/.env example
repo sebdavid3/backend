@@ -1,0 +1,2 @@
+DATABASE_URL=postgres://appuser:supersecret_dev@localhost:5432/appdb
+PORT=3000
